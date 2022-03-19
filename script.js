@@ -33,6 +33,7 @@ stopbtn.addEventListener('click', () =>{
 function startGame() {
     pattern = getPatterns();
     gamePlaying = true;
+    tonePlaying = true;
     // swaps the start and stop buttons because game has begun
     startbtn.classList.add("hidden");
     stopbtn.classList.remove("hidden");
