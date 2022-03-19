@@ -26,6 +26,9 @@ function getPatterns() {
 startbtn.addEventListener('click', () => {
     startGame();
 })
+stopbtn.addEventListener('click', () =>{
+    stopGame();
+})
 
 function startGame() {
     pattern = getPatterns();
@@ -34,12 +37,20 @@ function startGame() {
     startbtn.classList.add("hidden");
     stopbtn.classList.remove("hidden");
     playClueSequence();
+    guesschecker.textContent = "0";
 }
 
 function stopGame() {
     gamePlaying = false;
     stopbtn.classList.add("hidden");
     startbtn.classList.remove("hidden");
+    clueHoldTime = 1000;
+    progress = 0;
+    pattern = [];
+    guessCounter = 0; 
+    numberOfPatterns = 2;
+    wrongGuessCount = 0;
+    tonePlaying = false;
 }
 
 // Sound Synthesis Functions
@@ -126,7 +137,7 @@ function playClueSequence() {
 function loseGame() {
     stopGame();
     alert("Game Over. You lost.");
-    guesschecker.textContent = '0';
+    stopGame();
 }
 
 function winGame() {
