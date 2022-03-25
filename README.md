@@ -28,9 +28,9 @@ The following **optional** features are implemented:
 * [X] Playback speeds up on each turn
 * [X] Computer picks a different pattern each time the game is played
 * [x] Player only loses after 3 mistakes (instead of on the first mistake)
-* [ ] Game button appearance change goes beyond color (e.g. add an image)
+* [x] Game button appearance change goes beyond color (e.g. add an image)
 * [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
-* [ ] User has a limited amount of time to enter their guess on each turn
+* [x] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](http://g.recordit.co/vjiCvOEuzC.gif)
+![](https://recordit.co/DHauw9iHGH)
 ![](gif2-link-here)
 ![](gif3-link-here)
 ![](gif4-link-here)
@@ -55,7 +55,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 [In a real world setting, would it be one person that is in charge of writing the html and css to style the application and also the javascript to handle the logic behind it? I know there are people that specialize in full stack development, but on a project of a much bigger scale than something like this, would the responsibility fall on one person? If not, how would the work be split up?]
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[I would definitely need more than a few hours but I would have loved to develop a backend to store game info (how far in the game someone got etc) to make it more appealable to more people. It could be something simple that friends can compete with each other for fun, kind of like wordle.]
+[Two things I would like to improve on the project is adding some sort of multiplayer functionality with a leaderboards that can be either made to include global high scores, or filtered to show the highest scores amongst friends. To implement that, I would also go back and refractor the game to make sure it runs indefinitely until the user loses all their lives whether it be due to running out of time multiple times, making the wrong guesses, or a combination of both.]
 
 
 
