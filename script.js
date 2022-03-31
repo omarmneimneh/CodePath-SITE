@@ -75,6 +75,7 @@ function printTimer(txt) {
 
 function stopGame() {
   stopTimer();
+  pattern = [];
   gamePlaying = false;
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
