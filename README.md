@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](https://media.giphy.com/media/9tJp9rAfjwE6LDAqRf/giphy.gif)
+![](https://gfycat.com/scrawnyunsightlygordonsetter)
 ![](gif2-link-here)
 ![](gif3-link-here)
 ![](gif4-link-here)
