@@ -39,10 +39,10 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](https://recordit.co/DHauw9iHGH)
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
+![Base Application](http://g.recordit.co/5FTqfuXERP.gif)
+![Randomized Pattern:](http://g.recordit.co/fMYI5H6uut.gif)
+![Life System:](http://g.recordit.co/pd1j3uO7wo.gif)
+![Timer functionality:](http://g.recordit.co/AdrjT2qJM2.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -61,7 +61,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](https://youtu.be/Ix-wRrqyMWU) I wasn't able to obtain a link from zoom. I hope this will suffice.
+[My 5-minute Interview Recording](https://www.loom.com/share/b2a64e046b2b466fbf33b299417d00f4) 
 
 
 ## License
