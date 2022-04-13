@@ -40,10 +40,10 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-!Base Application: (http://g.recordit.co/T8ySQL5Wxh.gif) 
-!Difficulty Feature: (http://g.recordit.co/sUpU4P9xlB.gif)
-!Life System: (http://g.recordit.co/vaDEd849S3.gif)
-!Timer functionality:(http://g.recordit.co/8JnkC3AA3F.gif)
+![Base Application:](http://g.recordit.co/T8ySQL5Wxh.gif) 
+![Difficulty Feature:](http://g.recordit.co/sUpU4P9xlB.gif)
+![Life System:](http://g.recordit.co/vaDEd849S3.gif)
+![Timer functionality:](http://g.recordit.co/8JnkC3AA3F.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
