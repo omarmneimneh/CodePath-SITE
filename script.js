@@ -7,7 +7,7 @@ const hardBtn = document.getElementById("hard");
 const startBtn = document.getElementById("startBtn");
 const stopBtn = document.getElementById("stopBtn");
 //Global Variables
-var pattern = []; //placeholder values
+var pattern;
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
@@ -20,8 +20,6 @@ var timerDelay;
 var intervalID;
 var squareCount;
 
-// startBtn.addEventListener("click", () => startGame());
-// stopBtn.addEventListener("click", () => stopGame());
 hardBtn.addEventListener("click", () => {
   var numberOfSquares = 6;
   squareCount = numberOfSquares;
@@ -36,6 +34,7 @@ easyBtn.addEventListener("click", () => {
 });
 function startGame() {
   //initialize game variables
+  pattern = [];
   progress = 0;
   guessCounter = 0;
   gamePlaying = true;
@@ -50,12 +49,6 @@ function startGame() {
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("lifeCounter").classList.remove("hidden");
 }
-/**I'm trying to let the user decide the difficulty of the game but for some reason, each time I
- * start and stop the game, the number of patterns gets multiplied by 2 (8->16->32->etc)
- * and the timer continues to go down well into the negatives and displays the loss message each time
- * the time is decreased by 10. the lines with the -> next to them are the new lines added before the
- * stopped working properly
- */
 
 function queueButtons(btnNumber) {
   if (btnNumber == 4) {
@@ -68,7 +61,6 @@ function queueButtons(btnNumber) {
     //pattern gets randomized at the start of game
     pattern.push(randomNumber(btnNumber));
   }
-  console.log(pattern);
   playClueSequence();
 }
 
