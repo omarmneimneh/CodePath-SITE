@@ -20,8 +20,8 @@ var timerDelay;
 var intervalID;
 var squareCount;
 
-startBtn.addEventListener("click", () => startGame());
-stopBtn.addEventListener("click", () => stopGame());
+// startBtn.addEventListener("click", () => startGame());
+// stopBtn.addEventListener("click", () => stopGame());
 hardBtn.addEventListener("click", () => {
   var numberOfSquares = 6;
   squareCount = numberOfSquares;
@@ -111,6 +111,9 @@ function printTimer(txt) {
 }
 
 function stopGame() {
+  if (!document.getElementById("diffButtons").classList.contains("hidden")) {
+    document.getElementById("diffButtons").classList.add("hidden");
+  }
   stopTimer();
   pattern = [];
   for (var i = 5; i <= 6; i++) {
@@ -120,6 +123,9 @@ function stopGame() {
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("lifeCounter").classList.add("hidden");
+  document.getElementById("life3").classList.remove("hidden");
+  document.getElementById("life2").classList.remove("hidden");
+  document.getElementById("life1").classList.remove("hidden");
 }
 
 function randomNumber(max) {
