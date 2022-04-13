@@ -34,7 +34,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app!
+- [X] Added difficulty settings that control how many squares are shown
 - [x] Gifs for video walk through are working just fine on github but not on glitch. Was told to leave a comment in here.
 
 ## Video Walkthrough (GIF)
