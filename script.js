@@ -2,7 +2,10 @@
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before playing sequence
 const time = 10000; //base timer is 10 seconds
-
+const easyBtn = document.getElementById("easy");
+const hardBtn = document.getElementById("hard");
+const startBtn = document.getElementById("startBtn");
+const stopBtn = document.getElementById("stopBtn");
 //Global Variables
 var pattern = []; //placeholder values
 var progress = 0;
@@ -15,7 +18,22 @@ var clueHoldTime = 1000; //how long to hold each clue's light/sound in ms
 var timer;
 var timerDelay;
 var intervalID;
+var squareCount;
 
+startBtn.addEventListener("click", () => startGame());
+stopBtn.addEventListener("click", () => stopGame());
+hardBtn.addEventListener("click", () => {
+  var numberOfSquares = 6;
+  squareCount = numberOfSquares;
+  queueButtons(numberOfSquares);
+  document.getElementById("diffButtons").classList.add("hidden");
+});
+easyBtn.addEventListener("click", () => {
+  var numberOfSquares = 4;
+  squareCount = numberOfSquares;
+  queueButtons(numberOfSquares);
+  document.getElementById("diffButtons").classList.add("hidden");
+});
 function startGame() {
   //initialize game variables
   progress = 0;
@@ -25,13 +43,32 @@ function startGame() {
   clueHoldTime = 1000;
   timer = 0;
   timerDelay = 0;
-  for (var i = 0; i < 8; i++) {
-    //pattern gets randomized at the start of game
-    pattern.push(randomNumber(6));
-  }
+
+  document.getElementById("diffButtons").classList.remove("hidden");
+
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("lifeCounter").classList.remove("hidden");
+}
+/**I'm trying to let the user decide the difficulty of the game but for some reason, each time I
+ * start and stop the game, the number of patterns gets multiplied by 2 (8->16->32->etc)
+ * and the timer continues to go down well into the negatives and displays the loss message each time
+ * the time is decreased by 10. the lines with the -> next to them are the new lines added before the
+ * stopped working properly
+ */
+
+function queueButtons(btnNumber) {
+  if (btnNumber == 4) {
+    for (var i = 5; i <= 6; i++) {
+      document.getElementById(`button${i}`).classList.add("hidden");
+    }
+  }
+
+  for (var i = 0; i < 8; i++) {
+    //pattern gets randomized at the start of game
+    pattern.push(randomNumber(btnNumber));
+  }
+  console.log(pattern);
   playClueSequence();
 }
 
@@ -76,13 +113,13 @@ function printTimer(txt) {
 function stopGame() {
   stopTimer();
   pattern = [];
+  for (var i = 5; i <= 6; i++) {
+    document.getElementById(`button${i}`).classList.remove("hidden");
+  }
   gamePlaying = false;
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("lifeCounter").classList.add("hidden");
-  document.getElementById("life3").classList.remove("hidden");
-  document.getElementById("life2").classList.remove("hidden");
-  document.getElementById("life1").classList.remove("hidden");
 }
 
 function randomNumber(max) {
