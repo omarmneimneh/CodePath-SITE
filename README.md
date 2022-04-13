@@ -34,16 +34,16 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] Added difficulty settings that control how many squares are shown
+- [X] Added difficulty settings that control how many squares are shown (4 for easy, 6 for hard).
 - [x] Gifs for video walk through are working just fine on github but not on glitch. Was told to leave a comment in here.
 
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![Base Application](http://g.recordit.co/5FTqfuXERP.gif)
-![Randomized Pattern:](http://g.recordit.co/fMYI5H6uut.gif)
-![Life System:](http://g.recordit.co/pd1j3uO7wo.gif)
-![Timer functionality:](http://g.recordit.co/AdrjT2qJM2.gif)
+![Base Application](http://g.recordit.co/T8ySQL5Wxh.gif)
+![Difficulty Feature: ](http://g.recordit.co/sUpU4P9xlB.gif)
+![Life System:](http://g.recordit.co/vaDEd849S3.gif)
+![Timer functionality:](http://g.recordit.co/8JnkC3AA3F.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
