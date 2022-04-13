@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![Base Application](http://g.recordit.co/T8ySQL5Wxh.gif)
+![Base Application](http://g.recordit.co/T8ySQL5Wxh.gif) base application
 ![Difficulty Feature: ](http://g.recordit.co/sUpU4P9xlB.gif)
 ![Life System:](http://g.recordit.co/vaDEd849S3.gif)
 ![Timer functionality:](http://g.recordit.co/8JnkC3AA3F.gif)
