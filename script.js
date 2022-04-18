@@ -32,6 +32,7 @@ easyBtn.addEventListener("click", () => {
   queueButtons(numberOfSquares);
   document.getElementById("diffButtons").classList.add("hidden");
 });
+
 function startGame() {
   //initialize game variables
   pattern = [];
@@ -44,19 +45,18 @@ function startGame() {
   timerDelay = 0;
 
   document.getElementById("diffButtons").classList.remove("hidden");
-
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("lifeCounter").classList.remove("hidden");
 }
 
+//starts game based on difficulty
 function queueButtons(btnNumber) {
   if (btnNumber == 4) {
     for (var i = 5; i <= 6; i++) {
       document.getElementById(`button${i}`).classList.add("hidden");
     }
   }
-
   for (var i = 0; i < 8; i++) {
     //pattern gets randomized at the start of game
     pattern.push(randomNumber(btnNumber));
@@ -196,13 +196,14 @@ function guess(btn) {
 }
 // Sound Synthesis Functions
 const freqMap = {
-  1: 457,
-  2: 672.1,
-  3: 560.52,
-  4: 782.4,
-  5: 234.5,
-  6: 423.1,
+  1: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
+  2: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
+  3: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
+  4: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
+  5: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
+  6: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
 };
+
 function playTone(btn, len) {
   o.frequency.value = freqMap[btn];
   g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
