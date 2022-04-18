@@ -34,29 +34,29 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] Added difficulty settings that control how many squares are shown
+- [X] Added difficulty settings that control how many squares are shown (4 for easy, 6 for hard).
 - [x] Gifs for video walk through are working just fine on github but not on glitch. Was told to leave a comment in here.
 
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![Base Application](http://g.recordit.co/5FTqfuXERP.gif)
-![Randomized Pattern:](http://g.recordit.co/fMYI5H6uut.gif)
-![Life System:](http://g.recordit.co/pd1j3uO7wo.gif)
-![Timer functionality:](http://g.recordit.co/AdrjT2qJM2.gif)
+![Base Application:](http://g.recordit.co/T8ySQL5Wxh.gif) 
+![Difficulty Feature:](http://g.recordit.co/sUpU4P9xlB.gif)
+![Life System:](http://g.recordit.co/vaDEd849S3.gif)
+![Timer functionality:](http://g.recordit.co/8JnkC3AA3F.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 [I used stack overflow because I got stuck with making the buttons light up while the hints were playing.]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[A huge challenge that I encountered while working on thsi submission was making the buttons behave as expected while the hints were playing. For some reason, once I got into checking the user's guesses, the sounds just stopped playing. Another issue I encountered was when the hints were playing, the buttons refused to light up. I got around the sound issue by revisiting the older javascript code and seeing that I had mispelled something. On the other hands, for the lights, it turned out that when I wrote up the CSS, for some odd reason I mispelled each instance of the word "button" wrong when it came to styling the classed buttons. Another challenge was getting the guesses to be interpreted correctly. When I started this project, I quickly skimmed through the walkthrough to get a general idea of what was asked and began to work on it myself only checking back to make sure my logic was correct and to match names in case that was necessary. However, when I got to checking the guesses, I could not figure out how to make sure the computer was checking the correct index of the patterns array at the instance the guess was inserted (e.g if it was the second guess, check the second pattern.) It wasn't until I checked the template that it made sense to me that using a for loop isn't correct because I was waiting on user input rather than computer input.]
+[While working on this submission there were a number of major problems that I faced both relating to making the buttons behave as expected. First, the buttons failed to light up while the hints were playing. Second, when checking the user's guesses, the sounds stopped playing. After a comparison with an older version of the code I had written I fixed the issues by identifying a spelling mistake in my code. A third challenge I faced was getting the guesses to be interpreted correctly. I wanted to challenge myself with this assignment so most of my problem-solving was through trial and error. For this specific problem, however, I found it much more helpful to refer back to the template provided and realized that I was checking each of the user's inputs against the first hint of the pattern. I wasn't aware of using a for loop in order to completely check each hint's guess. Last but not least, I wanted to add something outside of the parameters given or suggested in the prework and decided to go with a difficulty system. It took a few hours of trial and error to overcome a bug in where the number of hints were doubled each time the start button was clicked. This rendered the game unplayable as the hints would be way too fast to see. I overcame this issue by moving some event handlers outside of the function that handles starting the game and everything from there was a cake walk.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[In a real world setting, would it be one person that is in charge of writing the html and css to style the application and also the javascript to handle the logic behind it? I know there are people that specialize in full stack development, but on a project of a much bigger scale than something like this, would the responsibility fall on one person? If not, how would the work be split up?]
+[In a real world setting, would it be one person that is in charge of writing the html and css to style the application and also the javascript to handle the logic behind it? I am aware that there are people that specialize in full stack development, but in the case of a project on a much bigger scale than something like this pre work, would the responsibility fall on one person? If not, how are the teams split up and how do they collaborate? After the project, is the team split up or do you continue working with the same team on a different project excluding people leaving whether it be through promotion or leaving the company?]
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[Two things I would like to improve on the project is adding some sort of multiplayer functionality with a leaderboards that can be either made to include global high scores, or filtered to show the highest scores amongst friends. To implement that, I would also go back and refractor the game to make sure it runs indefinitely until the user loses all their lives whether it be due to running out of time multiple times, making the wrong guesses, or a combination of both.]
+[Two things I would like to improve on the project is adding some sort of multiplayer functionality with a leaderboards that can be either made to include global high scores, or filtered to show the highest scores amongst friends. To implement that, I would also go back and refractor the game to make sure it runs indefinitely until the user loses all their lives whether it be due to running out of time multiple times, making the wrong guesses, or a combination of both. Another feature I would add is giving the user something like three hints were the sequence is replayed. If the user uses all three hints, they are left to beat their high score solely relying on their memory.]
 
 
 
