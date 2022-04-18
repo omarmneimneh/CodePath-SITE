@@ -43,7 +43,7 @@ function startGame() {
   clueHoldTime = 1000;
   timer = 0;
   timerDelay = 0;
-
+  updateSounds();
   document.getElementById("diffButtons").classList.remove("hidden");
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -196,13 +196,20 @@ function guess(btn) {
 }
 // Sound Synthesis Functions
 const freqMap = {
-  1: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
-  2: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
-  3: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
-  4: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
-  5: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
-  6: Math.floor(Math.random() * (1000 - 200 + 1) + 200),
+  1: 0,
+  2: 0,
+  3: 0,
+  4: 0,
+  5: 0,
+  6: 0,
 };
+
+//Change sounds every game
+function updateSounds() {
+  for (var i = 1; i <= 6; i++) {
+    freqMap[i] = Math.random() * (1000 - 200 + 1) + 200;
+  }
+}
 
 function playTone(btn, len) {
   o.frequency.value = freqMap[btn];
