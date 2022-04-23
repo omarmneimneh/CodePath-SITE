@@ -34,23 +34,24 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] Added difficulty settings that control how many squares are shown (4 for easy, 6 for hard).
+- [X] Added difficulty settings that control how many squares are shown (4 for easy, 6 for hard) and made the design responsive enough to handle either setting.
+- [X] Added a song that plays in the background only when the game is not actively being played.
 - [x] Gifs for video walk through are working just fine on github but not on glitch. Was told to leave a comment in here.
 
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![Base Application:](http://g.recordit.co/T8ySQL5Wxh.gif) 
-![Difficulty Feature:](http://g.recordit.co/sUpU4P9xlB.gif)
-![Life System:](http://g.recordit.co/vaDEd849S3.gif)
-![Timer functionality:](http://g.recordit.co/8JnkC3AA3F.gif)
+![Base Application:](http://g.recordit.co/RevPHj8sxr.gif) 
+![Difficulty Feature:](http://g.recordit.co/lQy07Sp1Qj.gif)
+![Life System:](http://g.recordit.co/3fUPzQJ4O6.gif)
+![Timer functionality:](http://g.recordit.co/RO5wOjR8hn.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 [I used stack overflow because I got stuck with making the buttons light up while the hints were playing.]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[First, I wanted to mention that there was an issue I faced where the sounds for buttons won't play and the only fix I have found was to refresh the browser or close the page and run it again (was told to mention this by a TA in the slack channel). While working on this submission there were a number of major problems that I faced both relating to making the buttons behave as expected. First, the buttons failed to light up while the hints were playing. Second, when checking the user's guesses, the sounds stopped playing. After a comparison with an older version of the code I had written I fixed the issues by identifying a spelling mistake in my code. A third challenge I faced was getting the guesses to be interpreted correctly. I wanted to challenge myself with this assignment so most of my problem-solving was through trial and error. For this specific problem, however, I found it much more helpful to refer back to the template provided and realized that I was checking each of the user's inputs against the first hint of the pattern. I wasn't aware of using a for loop in order to completely check each hint's guess. Last but not least, I wanted to add something outside of the parameters given or suggested in the prework and decided to go with a difficulty system. It took a few hours of trial and error to overcome a bug in where the number of hints were doubled each time the start button was clicked. This rendered the game unplayable as the hints would be way too fast to see. I overcame this issue by moving some event handlers outside of the function that handles starting the game and everything from there was a cake walk.]
+[First, I wanted to mention that there was an issue I faced where the sounds for buttons won't play and the only fix I have found was to refresh the browser or close the page and run it again (was told to mention this by a TA in the slack channel). While working on this submission there were a number of major problems that I faced relating to making the buttons behave as expected. First, the buttons failed to light up while the hints were playing. Second, when capturing the user's guesses, the sounds stopped playing when a button was clicked. After a comparison with an older version of the code I had written I fixed the issues by identifying a spelling mistake in my code. A third challenge I faced was getting the guesses to be interpreted correctly. I wanted to challenge myself with this assignment so most of my problem-solving was through trial and error. For this specific problem, however, I found it much more helpful to refer back to the template provided and realized that I was checking each of the user's inputs against the first hint of the pattern. I wasn't aware of using a for loop in order to completely check each hint's guess. The next thing I faced issues with was that I wanted to add something outside of the parameters given or suggested in the prework and decided to go with a difficulty system. It took a few hours of trial and error to overcome a bug in where the number of hints were doubled each time the start button was clicked. This rendered the game unplayable as the hints would become too fast to see. I overcame this issue by moving some event handlers outside of the function that handles starting the game and everything from there was a cake walk. Lastly, I faced an issue where if the player happened to click and drag a button, the click will be registered as a long hold. This leads to the user having to click the button once more in order to unregister the click, which does not lead to wrong guesses or lives lost. I tried to search the internet for a solution but what I found is that it has nothing to do with the code, but it is an issue within browsers.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 [In a real world setting, would it be one person that is in charge of writing the html and css to style the application and also the javascript to handle the logic behind it? I am aware that there are people that specialize in full stack development, but in the case of a project on a much bigger scale than something like this pre work, would the responsibility fall on one person? If not, how are the teams split up and how do they collaborate? After the project, is the team split up or do you continue working with the same team on a different project excluding people leaving whether it be through promotion or leaving the company?]
