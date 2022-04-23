@@ -46,7 +46,6 @@ window.onload = function () {
 function startGame() {
   //initialize game variables
   barricades.pause();
-  console.log(pattern);
   progress = 0;
   guessCounter = 0;
   gamePlaying = true;
@@ -72,8 +71,6 @@ function queueButtons(btnNumber) {
     //pattern gets randomized at the start of game
     pattern.push(randomNumber(btnNumber));
   }
-
-  console.table(pattern);
   playClueSequence();
 }
 
