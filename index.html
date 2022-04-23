@@ -9,39 +9,37 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-        <h1>Light and Sound Memory Game</h1>
-        
-        <p>
-            Repeat the pattern back to win the game!
-        <div id="lifeCounter" class="hidden"><span class="heart" id="life1">&hearts;</span> <span class="heart"
-                id="life2">&hearts;</span> <span class="heart" id="life3">&hearts;</span></div>
-        </p>
-        <div class="" id="display"> </div>
-        
-        <p>
-            <button id="startBtn" onclick="startGame()">
-                Start
-            </button>
-            <button id="stopBtn" class="hidden" onclick="stopGame()">
-                Stop
-            </button>
-        </p>
+    <h1>Light and Sound Memory Game</h1>
+    
+    <p>
+        Repeat the pattern back to win the game!
+    <div id="lifeCounter" class="hidden"><span class="heart" id="life1">&hearts;</span> <span class="heart"
+            id="life2">&hearts;</span> <span class="heart" id="life3">&hearts;</span></div>
+    </p>
+    <div class="" id="display"> </div>
+    
+    <p>
+        <button id="startBtn" onclick="startGame()">
+            Start
+        </button>
+        <button id="stopBtn" class="hidden" onclick="stopGame()">
+            Stop
+        </button>
+    </p>
 
-        <div class="hidden" id="diffButtons">
-            <button id="easy">Easy</button>
-            <button id="hard">Hard</button>
-        </div>
-        <div id="gameButtonArea">
-            <button class="" id="button1" onmousedown="startTone(1), lightButton(1)" onmouseup="stopTone(), clearButton(1)" onclick="guess(1)"><img src="assets\attack-on-titan-final-season.png" alt="" srcset="" class="hidden" id="button1img"></button>
-            <button class="" id="button3" onmousedown="startTone(3), lightButton(3)" onmouseup="stopTone(), clearButton(3)" onclick="guess(3)"><img src="assets\Attack-On-Titan-Season-4-Episode-11-Gabi-Horse.webp" alt="" srcset="" class="hidden" id="button3img"></button>
-            <button class="" id="button4" onmousedown="startTone(4), lightButton(4)" onmouseup="stopTone(), clearButton(4)" onclick="guess(4)"><img src="assets\attack-on-titan-war-hammer.webp" alt="" srcset="" class="hidden" id="button4img"></button>
-            <button class="" id="button2" onmousedown="startTone(2), lightButton(2)" onmouseup="stopTone(), clearButton(2)" onclick="guess(2)"><img src="assets\l-intro-1616776727.jpg" alt="" srcset="" class="hidden" id="button2img"></button>
-            <button class="" id="button5" onmousedown="startTone(5), lightButton(5)" onmouseup="stopTone(), clearButton(5)" onclick="guess(5)"><img src="assets\Levi-Attack-on-titan-Scout-uniform.jpeg" alt="" srcset="" class="hidden" id="button5img"></button>
-            <button class="" id="button6" onmousedown="startTone(6), lightButton(6)" onmouseup="stopTone(), clearButton(6)" onclick="guess(6)"><img src="assets\MV5BMmQ3NzVmOWUtNTQ5Yi00MDczLWIxMDYtNGU5ZGU2YjI1NDY2XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg" alt="" srcset="" class="hidden" id="button6img"></button>
-        </div>
-        
-        <p id="warningmsg">Please try not to click and drag the images, there is a bug that will register you still pressing the button. You won't lose lives or anything but it is quite annoying. If you do accidentally click and drag, just click the button again and it will reset :)</p> 
-        
-        <script src="https://button.glitch.me/button.js" defer></script>
+    <div class="hidden" id="diffButtons">
+        <button id="easy">Easy</button>
+        <button id="hard">Hard</button>
+    </div>
+    <div id="gameButtonArea" class="six">
+        <button class="" id="button1" onmousedown="startTone(1), lightButton(1)" onmouseup="stopTone(), clearButton(1)" onclick="guess(1)"><img src="assets\attack-on-titan-final-season.png" alt="" srcset="" class="hidden" id="button1img"></button>
+        <button class="" id="button3" onmousedown="startTone(3), lightButton(3)" onmouseup="stopTone(), clearButton(3)" onclick="guess(3)"><img src="assets\Attack-On-Titan-Season-4-Episode-11-Gabi-Horse.webp" alt="" srcset="" class="hidden" id="button3img"></button>
+        <button class="" id="button4" onmousedown="startTone(4), lightButton(4)" onmouseup="stopTone(), clearButton(4)" onclick="guess(4)"><img src="assets\attack-on-titan-war-hammer.webp" alt="" srcset="" class="hidden" id="button4img"></button>
+        <button class="" id="button2" onmousedown="startTone(2), lightButton(2)" onmouseup="stopTone(), clearButton(2)" onclick="guess(2)"><img src="assets\l-intro-1616776727.jpg" alt="" srcset="" class="hidden" id="button2img"></button>
+        <button class="" id="button5" onmousedown="startTone(5), lightButton(5)" onmouseup="stopTone(), clearButton(5)" onclick="guess(5)"><img src="assets\Levi-Attack-on-titan-Scout-uniform.jpeg" alt="" srcset="" class="hidden" id="button5img"></button>
+        <button class="" id="button6" onmousedown="startTone(6), lightButton(6)" onmouseup="stopTone(), clearButton(6)" onclick="guess(6)"><img src="assets\MV5BMmQ3NzVmOWUtNTQ5Yi00MDczLWIxMDYtNGU5ZGU2YjI1NDY2XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg" alt="" srcset="" class="hidden" id="button6img"></button>
+    </div>
+    
+    <script src="https://button.glitch.me/button.js" defer></script>
 </body>
 </html>

@@ -6,12 +6,17 @@ const easyBtn = document.getElementById("easy");
 const hardBtn = document.getElementById("hard");
 const startBtn = document.getElementById("startBtn");
 const stopBtn = document.getElementById("stopBtn");
+//sound that plays while the game is not being actively played
+const barricades = new Audio("./assets/Barricades.wav");
+barricades.loop = true;
+barricades.volume = 0.2;
+
 //Global Variables
-var pattern;
+var pattern = [];
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
-var volume = 0.5;
+var volume = 1;
 var guessCounter = 0;
 var remainingLife = 3;
 var clueHoldTime = 1000; //how long to hold each clue's light/sound in ms
@@ -30,12 +35,18 @@ easyBtn.addEventListener("click", () => {
   var numberOfSquares = 4;
   squareCount = numberOfSquares;
   queueButtons(numberOfSquares);
+  document.getElementById("gameButtonArea").classList.add("four");
+  document.getElementById("gameButtonArea").classList.remove("six");
   document.getElementById("diffButtons").classList.add("hidden");
 });
+window.onload = function () {
+  barricades.play();
+};
 
 function startGame() {
   //initialize game variables
-  pattern = [];
+  barricades.pause();
+  console.log(pattern);
   progress = 0;
   guessCounter = 0;
   gamePlaying = true;
@@ -61,6 +72,8 @@ function queueButtons(btnNumber) {
     //pattern gets randomized at the start of game
     pattern.push(randomNumber(btnNumber));
   }
+
+  console.table(pattern);
   playClueSequence();
 }
 
@@ -103,6 +116,11 @@ function printTimer(txt) {
 }
 
 function stopGame() {
+  barricades.play();
+  if (squareCount == 4) {
+    document.getElementById("gameButtonArea").classList.remove("four");
+    document.getElementById("gameButtonArea").classList.add("six");
+  }
   if (!document.getElementById("diffButtons").classList.contains("hidden")) {
     document.getElementById("diffButtons").classList.add("hidden");
   }
@@ -196,12 +214,12 @@ function guess(btn) {
 }
 // Sound Synthesis Functions
 const freqMap = {
-  1: 0,
-  2: 0,
-  3: 0,
-  4: 0,
-  5: 0,
-  6: 0,
+  1: 300,
+  2: 700.2,
+  3: 499,
+  4: 683,
+  5: 900,
+  6: 287,
 };
 
 //Change sounds every game
